@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>dog food page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+        /* top bar start */
+.input-container1 {
+    position: relative;
+    width: 250px;
+    margin-left:100px;
+}
+
+.input-container1 input {
+    width: 100%;
+    padding: 10px 35px; /* Adjust padding to avoid overlap */
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.input-container1 i  {
+    position: absolute;
+    right: 15px;
+    top: 30%;
+}
+.input-container2 {
+    position: relative;
+    width: 300px;
+    margin-right:180px;
+}
+
+.input-container2 input {
+    width: 100%;
+    padding: 10px 35px; /* Adjust padding to avoid overlap */
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.input-container2 i  {
+    position: absolute;
+    left: 15px;
+    top: 30%;
+}
+.top-bar{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:10px;
+    background-color: white;
+    /* position:fixed; */
+    /* top:0; */
+}
+span{
+    color:coral;
+}
+.top-icons i{
+    margin-right:30px;
+    font-size: 25px;
+   
+}
+.top-bar img{
+    width:70px;
+    height:auto;
+}
+.logoimg{
+    display:flex;
+}
+.logoimg img{
+    position:relative;
+}
+.logoimg h3{
+    position:absolute;
+    left:105px;
+    top:40px;
+}
+/* topbar end */
+
+/* navbar start */
+.navbar{
+    display: flex;
+    background-color: rgb(4, 105, 100);
+    justify-content:center;
+    align-items: center;
+    padding:10px;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(4, 105, 100);
+    color:black;
+
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+   
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* navbar end */
+/* product card start */
+ .dogfood{
+   margin:20px 480px;
+ }
+        .card {
+            width: 250px;
+            border-radius: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background: #fff;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        .discount-banner {
+            background: #54b6a7;
+            color: white;
+            padding: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            
+        }
+
+        .product-image {
+            width: 200px;
+            height:200px;
+            border-radius: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            justify-content:flex-start;
+            margin: 5px 0;
+        }
+
+        .rating span {
+            color: #ff9800;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        .old-price {
+            font-size: 12px;
+            text-decoration: line-through;
+            color: #888;
+            margin-left: 5px;
+        }
+
+        .discount {
+            background: #4CAF50;
+            color: white;
+            font-size: 10px;
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-left: 5px;
+        }
+
+        .sizes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+            margin: 10px 0;
+        }
+
+        .size {
+            border: 1px solid #ccc;
+            padding: 5px 8px;
+            font-size: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .size:hover {
+            background: #ddd;
+        }
+
+        .cart-button {
+            background: #28a745;
+            color: white;
+            padding: 8px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .cart-button:hover {
+            background: #218838;
+        }
+        /* product card end */
+
+        /* food section start */
+        .allfoods{
+            display: flex;
+            gap:30px;
+            padding:10px;
+            border-bottom:1px solid  #888;
+
+        }
+        
+        .food img{
+            width:150px;
+            padding:15px;
+        }
+        .food{
+            text-align: center;
+            margin-top: 20px;
+           
+        }
+        .dogs{
+            margin-left: 100px;
+            margin-bottom: 20px;
+        }
+        .footer{
+    display:flex;
+    gap:40px;
+    background-color: rgb(61, 84, 95);
+    color:white;
+    justify-content: space-around;
+    padding:15px;
+ 
+}
+.footlogo{
+    display:flex;
+}
+.footlogo img{
+    position:relative;
+}
+
+.contact1 img{
+    width:70px;
+    height:auto;
+    position:relative;
+    
+}
+.contact1 h3{
+    position:absolute;
+    left:153px;
+    top:940px;
+   
+   
+}
+.contact2  p{
+    margin-bottom: 5px;
+}
+.contact3 li{
+    margin-bottom: 5px;
+}
+.contact4 p{
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+    </style>
+</head>
+<body>
+    <!-- header section start -->
+    <header>
+        <div class="top-bar">
+            <div class="logoimg">
+            <a href="index.html"><img src="images/logo1.PNG"></a>
+            <h3 class="logo">Pet <span>World</span></h3>
+           </div>
+            <div class="input-container1">
+            <input type="text" placeholder="Search for Products"><i class='bx bx-search-alt-2' style='color:#ff7f50'  ></i>
+            </div>
+            <div class="input-container2">
+            <i class='bx bx-location-plus'style='color:#ff7f50'></i><input type="text" placeholder="Enter Pincode to check Delivery Date">
+            </div>
+            <div class="top-icons">
+            <a href="#"><i class='bx bx-phone'style='color:#ff7f50'></i></a>
+            <a href="#"><i class='bx bx-user'style='color:#ff7f50'></i></a>
+            <a href="#"><i class='bx bx-cart'style='color:#ff7f50'></i></a>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">Dogs</button>
+                <div class="dropdown-content">
+                    <a href="dogfood.html">Food</a>
+                    <a href="#">Grooming</a>
+                    <a href="#">Health</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Cats</button>
+                <div class="dropdown-content">
+                    <a href="#">Food</a>
+                    <a href="#">Grooming</a>
+                    <a href="#">Health</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Birds</button>
+                <div class="dropdown-content">
+                    <a href="#">Food</a>
+                    <a href="#">Grooming</a>
+                    <a href="#">Health</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Fish</button>
+                <div class="dropdown-content">
+                    <a href="#">Food</a>
+                    <a href="#">Grooming</a>
+                    <a href="#">Health</a>
+                </div>
+            </div>
+                    
+ </nav>
+       <!-- nav bar end -->
+    </header>
+    <!-- header section end -->
+
+    <!-- foods selection section start -->
+
+    <section class="foods">
+        <div class="allfoods">
+            <h1 class="dogs">DOGS<span>Food</span></h1><br>
+            <div class="food">
+              <img src="images/Ellipse 3.png">
+              <p>Meal</p>
+            </div>
+            <div class="food">
+                <img src="images/Ellipse 3-1.png">
+              <p>Puppy Food</p>
+            </div>
+            <div class="food">
+                <img src="images/Ellipse 2.png">
+              <p>Adult Food</p>
+            </div>
+            <div class="food">
+                <img src="images/Ellipse 3.png">
+              <p>Pedigree</p>
+            </div>
+            <div class="food">
+                <img src="images/Ellipse 3-1.png">
+              <p>Royal Canin</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- food section end -->
+     <!-- product card start -->
+<section class="dogfood">
+    <div class="card">
+        <div class="discount-banner">Extra 5% Off. Use code SC35</div>
+        <img src="images/Rectangle 44-52.png" alt="Product Image" class="product-image">
+        <div class="rating">
+            <span>⭐ 4.9</span>
+        </div><hr>
+        <div class="title">Hill’s Science Diet Adult Chicken & Barley Recipe</div>
+        <div class="price">Rs. 4800 <span class="old-price">Rs. 5200</span> <span class="discount">12% Off</span></div>
+        <div class="sizes">
+            <div class="size">1 kg</div>
+            <div class="size">2.8 kg</div>
+            <div class="size">800 g</div>
+            <div class="size">5 kg</div>
+            <div class="size">1.5 kg</div>
+            <div class="size">3 kg</div>
+        </div>
+        <button class="cart-button">Add to Cart</button>
+    </div>
+</section>
+
+ <!-- footer section start -->
+ <section class="footer">
+    <div class=" contact1"class="foot">
+        <div class="footlogo">
+            <a href="index.html"><img src="images/logo1.PNG"></a>
+            <h3 class="flogo">Pet <span>World</span></h3>
+        </div>
+        <p>&copy;<small>2025 Pet World. All Rights Reserved.</small></p>
+        <p>.<small> Privacy Policy. Terms. Sitemap</small></p>
+    </div>
+    <div class="contact2"class="foot">
+        <h3><span>Shop Now</span></h3><br>
+        <p><i class='bx bx-right-arrow-alt' style='color:#ff7f50'  ></i>Dogs</p>
+        <p><i class='bx bx-right-arrow-alt' style='color:#ff7f50'  ></i>Cats</p>
+        <p><i class='bx bx-right-arrow-alt' style='color:#ff7f50'  ></i>Birds</p>
+        <p><i class='bx bx-right-arrow-alt' style='color:#ff7f50'  ></i>Fish</p>
+    </div>
+    <div class="contact3"class="foot">
+        <h3><span>Online Shopping</span></h3><br>
+        <ul>
+        <li>Terms Of Use</li>
+        <li>Privacy Policy</li>
+        <li>Return Policy</li>
+        <li>Shipping Policy</li>
+        <li>Contact Us</li>
+    </ul>
+    </div>
+    <div class="contact4"class="foot">
+        <p><i class='bx bx-phone'style='color:#ff7f50'></i>+91 123564545 90</p>
+        <p><i class='bx bx-location-plus'style='color:#ff7f50'></i>45,Cross street,Mumbai</p>
+        <p><i class='bx bxs-envelope' style='color:#ff7f50'  ></i>petworld@gmail.com</p>
+        <p><i class='bx bxs-time-five' style='color:#ff7f50'  ></i>Timing: 10 AM To 5 PM</p>
+    </div>
+</section>
+
+</body>
+</html>
